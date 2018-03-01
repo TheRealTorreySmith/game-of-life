@@ -50,7 +50,7 @@ function uiGridCellClick(event) {
     delete activeCells[rowColString]
   }
 
-  
+
 }
 
 
@@ -78,31 +78,20 @@ function startBtnClick(event) {
 function oneTickBtnClick(event) {
   event.preventDefault()
   console.log('oneTickBtnClick')
-  $('#stop-tick-btn').attr('disabled', true);
-  $('#dump-config-btn').attr('disabled', false);
-  $('#clear-btn').attr('disabled', false);
-  $('#start-tick-btn').attr('disabled', false);
-  $('#one-tick-btn').attr('disabled', false);
+
   }
 
 function clearBtnClick(event) {
   event.preventDefault()
   console.log('clearBtnClick')
-  $('#stop-tick-btn').attr('disabled', true);
-  $('#dump-config-btn').attr('disabled', false);
-  $('#clear-btn').attr('disabled', false);
-  $('#start-tick-btn').attr('disabled', false);
-  $('#one-tick-btn').attr('disabled', false);
+  $('td').removeClass('on')
+  activeCells = {}
   }
 
 function dumpConfigBtnClick(event) {
   event.preventDefault()
   console.log('dumpConfigBtnClick')
-  $('#stop-tick-btn').attr('disabled', true);
-  $('#dump-config-btn').attr('disabled', false);
-  $('#clear-btn').attr('disabled', false);
-  $('#start-tick-btn').attr('disabled', false);
-  $('#one-tick-btn').attr('disabled', false);
+
   }
 
 });
