@@ -1,7 +1,10 @@
 $(document).ready(function () {
-
+//Grid dimensions
 const maxRows = 20
 const maxCols = 20
+
+//Grid data storage
+let activeCells = {}
 
 //Set initial UI state
 $('#stop-tick-btn').attr('disabled', true);
@@ -38,7 +41,16 @@ function displayUIGrid() {
 function uiGridCellClick(event) {
   event.preventDefault()
   const rowColString = $(this).attr('data-row-col')
-  console.log(`uiGridCellClick()${rowColString}`)
+  $(this).toggleClass('on')
+
+  if ($(this).hasClass('on')) {
+    activeCells[rowColString] = true
+  }
+  else {
+    delete activeCells[rowColString]
+  }
+
+  
 }
 
 
